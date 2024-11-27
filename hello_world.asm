@@ -10,7 +10,7 @@ msg: db "hello, world", 0xA
 len: equ $ - msg
 
 section .text
-
+_start:
 	mov rdi, stdout
 	mov rsi, msg
 	mov rdx, len
