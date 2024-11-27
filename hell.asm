@@ -3,7 +3,7 @@ global _start
 %define stdout 1
 %define syswrite 1
 %define exit_success 0
-%define sysexit 60
+%define sys_exit 60
 
 section .data
 msg: db "hello, world", 0xA
@@ -18,5 +18,5 @@ section .text
 	syscall
 
 	mov rdi, exit_success
-	mov rax, sysexit
+	mov rax, sys_exit
 	syscall
